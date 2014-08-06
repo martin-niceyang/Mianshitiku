@@ -29,7 +29,10 @@ public final class R {
         public static final int p_write=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int action_settings=0x7f080003;
+        public static final int content_frame=0x7f080001;
+        public static final int drawer_layout=0x7f080000;
+        public static final int left_drawer=0x7f080002;
     }
     public static final class layout {
         public static final int main=0x7f030000;
