@@ -4,5 +4,10 @@
     <string name="app_name">Mianshitiku</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="index">主页</string>
+    <string name="write_question">出题</string>
+    <string name="about">关于</string>
+    <string name="suggestion">建议</string>
+
 
 </resources>
