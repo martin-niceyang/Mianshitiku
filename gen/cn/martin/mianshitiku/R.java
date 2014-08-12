@@ -14,6 +14,7 @@ public final class R {
         public static final int black=0x7f040000;
         public static final int gray_little=0x7f040002;
         public static final int white=0x7f040001;
+        public static final int yellow=0x7f040003;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -44,10 +45,18 @@ public final class R {
         public static final int p_write=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f090000;
+        public static final int action_settings=0x7f090004;
+        public static final int btn_dynamic=0x7f090001;
+        public static final int btn_me=0x7f090003;
+        public static final int btn_question_bank=0x7f090002;
+        public static final int main_radio=0x7f090000;
+        public static final int realtabcontent=0x01010000;
     }
     public static final class layout {
-        public static final int main=0x7f030000;
+        public static final int fm_dynamic=0x7f030000;
+        public static final int fm_me=0x7f030001;
+        public static final int fm_question_bank=0x7f030002;
+        public static final int main=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -56,8 +65,11 @@ public final class R {
         public static final int about=0x7f060005;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
+        public static final int dynamic=0x7f060007;
         public static final int hello_world=0x7f060002;
         public static final int index=0x7f060003;
+        public static final int me=0x7f060009;
+        public static final int question_bank=0x7f060008;
         public static final int suggestion=0x7f060006;
         public static final int write_question=0x7f060004;
     }
@@ -88,5 +100,6 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
+        public static final int main_tab_bottom=0x7f070002;
     }
 }

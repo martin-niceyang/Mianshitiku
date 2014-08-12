@@ -8,6 +8,9 @@
     <string name="write_question">出题</string>
     <string name="about">关于</string>
     <string name="suggestion">建议</string>
-
-
+    
+    <string name="dynamic">动态</string>
+	<string name="question_bank">题库</string>
+	<string name="me">我</string>
+	
 </resources>
