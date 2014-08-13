@@ -1,15 +1,9 @@
 package cn.martin.mianshitiku.activity;
 
-import java.util.HashMap;
-
 import cn.martin.mianshitiku.R;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RadioButton;
@@ -52,7 +46,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		mBtnDynamic.setOnClickListener(this);
 		mBtnQuestionBank.setOnClickListener(this);
 		mBtnMe.setOnClickListener(this);
-
+		
 	}
 
 	@Override
