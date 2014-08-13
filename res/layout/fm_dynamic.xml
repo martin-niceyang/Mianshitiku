@@ -2,8 +2,23 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ff00"
+    android:background="@color/backgroud"
     android:orientation="vertical" >
-    
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/advertise" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/black"
+        android:dividerHeight="0.1dp" >
+    </ListView>
 
 </LinearLayout>

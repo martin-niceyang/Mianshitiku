@@ -4,6 +4,7 @@
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
     <color name="gray_little">#060606</color>
-    <color name="yellow">#ffde03</color>
+    <color name="ActionBar">#64D5B5</color>
+    <color name="backgroud">#E3E5DD</color>
     
 </resources>
