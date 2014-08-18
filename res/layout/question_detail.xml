@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroud"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/com_title" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/question_content" />
+
+            <TextView
+                android:id="@+id/comment_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ActionBar"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:text="@string/the_comments"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+
+            <cn.martin.mianshitiku.ui.MyListView
+                android:id="@+id/list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:cacheColorHint="#00000000"
+                android:divider="@color/black"
+                android:dividerHeight="0.1dp"
+                android:listSelector="@android:color/transparent" >
+            </cn.martin.mianshitiku.ui.MyListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/question_comment_commit" />
+
+</LinearLayout>

@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/ActionBar"
+    android:layout_height="100dp"
+    android:background="@color/gray"
     android:orientation="vertical" >
-    
-    <TextView 
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:text="hahaah"/>
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/advertise_bar"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:padding="5dp"
+        android:orientation="vertical" >
+        
+        <TextView 
+            android:id="@+id/advertis_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/text_size"/>
+        
+    </LinearLayout>
+
+</RelativeLayout>

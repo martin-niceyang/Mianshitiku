@@ -3,18 +3,18 @@ package cn.martin.mianshitiku.activity;
 import cn.martin.mianshitiku.R;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTabHost;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.RadioButton;
+import android.widget.TabHost;
 
 public class MainActivity extends FragmentActivity implements OnClickListener {
 
-	private FragmentTabHost mTabHost;
+	private TabHost mTabHost;
 
 	private RadioButton mBtnDynamic;
 	private RadioButton mBtnQuestionBank;
-	private RadioButton mBtnMe;
+	private RadioButton mBtnSet;
 
 	private final String TAB_DYNAMIC = "tab1";
 	private final String TAB_QUESTION_BANK = "tab2";
@@ -25,15 +25,12 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
 
-		mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-		mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+		mTabHost = (TabHost) findViewById(android.R.id.tabhost);
+		mTabHost.setup();
 
-		mTabHost.addTab(mTabHost.newTabSpec(TAB_DYNAMIC).setIndicator(TAB_DYNAMIC),
-				Fm_Dynamic.class, null);
-		mTabHost.addTab(mTabHost.newTabSpec(TAB_QUESTION_BANK).setIndicator(TAB_QUESTION_BANK),
-				Fm_QuestionBank.class, null);
-		mTabHost.addTab(mTabHost.newTabSpec(TAB_ME).setIndicator(TAB_ME),
-				Fm_Me.class, null);
+		mTabHost.addTab(mTabHost.newTabSpec(TAB_DYNAMIC).setIndicator(TAB_DYNAMIC).setContent(R.id.tab_1));
+		mTabHost.addTab(mTabHost.newTabSpec(TAB_QUESTION_BANK).setIndicator(TAB_QUESTION_BANK).setContent(R.id.tab_2));
+		mTabHost.addTab(mTabHost.newTabSpec(TAB_ME).setIndicator(TAB_ME).setContent(R.id.tab_3));
 		
 		if (savedInstanceState != null) {
 			mTabHost.setCurrentTabByTag(savedInstanceState.getString("tab"));
@@ -41,11 +38,11 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 
 		mBtnDynamic = (RadioButton) findViewById(R.id.btn_dynamic);
 		mBtnQuestionBank = (RadioButton) findViewById(R.id.btn_question_bank);
-		mBtnMe = (RadioButton) findViewById(R.id.btn_me);
+		mBtnSet = (RadioButton) findViewById(R.id.btn_set);
 
 		mBtnDynamic.setOnClickListener(this);
 		mBtnQuestionBank.setOnClickListener(this);
-		mBtnMe.setOnClickListener(this);
+		mBtnSet.setOnClickListener(this);
 		
 	}
 
@@ -65,7 +62,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		case R.id.btn_question_bank:
 			mTabHost.setCurrentTabByTag(TAB_QUESTION_BANK);
 			break;
-		case R.id.btn_me:
+		case R.id.btn_set:
 			mTabHost.setCurrentTabByTag(TAB_ME);
 			break;
 		}

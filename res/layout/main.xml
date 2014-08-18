@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.app.FragmentTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/tabhost"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,15 +13,28 @@
 
         <FrameLayout
             android:id="@android:id/tabcontent"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="0" />
+            android:layout_weight="1" >
 
-        <FrameLayout
-            android:id="@+android:id/realtabcontent"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            <fragment
+                android:id="@+id/tab_1"
+                android:name="cn.martin.mianshitiku.activity.Fm_Dynamic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:id="@+id/tab_2"
+                android:name="cn.martin.mianshitiku.activity.Fm_QuestionBank"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <fragment
+                android:id="@+id/tab_3"
+                android:name="cn.martin.mianshitiku.activity.Fm_Me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
 
         <TabWidget
             android:id="@android:id/tabs"
@@ -45,28 +58,29 @@
                 android:gravity="center"
                 android:padding="10dp"
                 android:tag="radio_button0"
+                android:drawableTop="@drawable/action_dynamic_th"
                 android:text="@string/dynamic" />
 
             <RadioButton
                 android:id="@+id/btn_question_bank"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
-                android:checked="true"
                 android:gravity="center"
                 android:padding="10dp"
+                android:drawableTop="@drawable/action_question_th"
                 android:tag="radio_button0"
                 android:text="@string/question_bank" />
 
             <RadioButton
-                android:id="@+id/btn_me"
+                android:id="@+id/btn_set"
                 style="@style/main_tab_bottom"
                 android:layout_weight="1"
-                android:checked="true"
                 android:gravity="center"
                 android:padding="10dp"
+                android:drawableTop="@drawable/action_set_th"
                 android:tag="radio_button0"
-                android:text="@string/me" />
+                android:text="@string/set" />
         </RadioGroup>
     </LinearLayout>
 
-</android.support.v4.app.FragmentTabHost>
+</TabHost>

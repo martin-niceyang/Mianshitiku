@@ -12,5 +12,10 @@
     <string name="dynamic">动态</string>
 	<string name="question_bank">题库</string>
 	<string name="me">我</string>
+	<string name="set">设置</string>
+	<string name="the_comments">大家有话说</string>
+	<string name="my_comment">我有话要说...</string>
+	<string name="question_detail">题目详情</string>
+	<string name="submit">提交</string>
 	
 </resources>
